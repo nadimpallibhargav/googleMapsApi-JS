@@ -18,4 +18,14 @@ function initMap() {
         icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
     });
 
+    // marker Content
+    let markerText = new google.maps.InfoWindow({
+        content: '<h3>First place to visit</h3>'
+    });
+
+    // onclick of marker, text will visible
+    marker.addListener('click', () => {
+        markerText.open(map,marker);
+    });
+
 }
