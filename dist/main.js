@@ -13,7 +13,8 @@ function initMap() {
 
     // click anywhere on the map
     google.maps.event.addListener(mainMap, 'click', (event) => {
-        addMarker({cordinates:event.latLng});
+        let coord = event.latLng;
+        addMarker({cordinates:coord,content: `<h3>${event.latLng}</h3>` });
     });
 
     // function for adding markers
