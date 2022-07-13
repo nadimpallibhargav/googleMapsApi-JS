@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 10px;
+}
+
+#map {
+    width: 100%;
+    min-height: 400px;
+}
