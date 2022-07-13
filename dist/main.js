@@ -11,21 +11,15 @@ function initMap() {
     // map
     let mainMap = new google.maps.Map(mapFrame, options);
 
-    // marker on map
-    let marker = new google.maps.Marker({
-        position: {lat:13.0332221,lng:77.6299528},
-        map: mainMap,
-        icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
-    });
+    function addMarker(cordinates) {        
+        let marker = new google.maps.Marker({
+            position: cordinates,
+            map: mainMap,
+            icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+        });
+    }
 
-    // marker Content
-    let markerText = new google.maps.InfoWindow({
-        content: '<h3>First place to visit</h3>'
-    });
-
-    // onclick of marker, text will visible
-    marker.addListener('click', () => {
-        markerText.open(map,marker);
-    });
+    addMarker({lat:13.0332221,lng:77.6299528});
+    addMarker({lat:13.0332221,lng:77.6299800});
 
 }
