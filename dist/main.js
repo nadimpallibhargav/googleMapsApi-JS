@@ -1,9 +1,20 @@
-var mapFrame = document.querySelector('#map');
+const mapFrame = document.querySelector('#map');
 
 function initMap() {
-    var options = {
+
+    // map options
+    let options = {
         zoom:20,
-        center:{lat:13.0332221,lng:77.6299527}
+        center:{lat:13.0332221,lng:77.6299528}
     }
-    var map = new google.maps.Map(mapFrame, options);
+
+    // map
+    let mainMap = new google.maps.Map(mapFrame, options);
+
+    // marker on map
+    let marker = new google.maps.Marker({
+        position: {lat:13.0332221,lng:77.6299528},
+        map: mainMap
+    });
+
 }
