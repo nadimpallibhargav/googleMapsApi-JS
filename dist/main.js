@@ -11,6 +11,11 @@ function initMap() {
     // map
     let mainMap = new google.maps.Map(mapFrame, options);
 
+    // click anywhere on the map
+    google.maps.event.addListener(mainMap, 'click', (event) => {
+        addMarker({cordinates:event.latLng});
+    });
+
     // function for adding markers
     function addMarker(mapProperties) {     
         let marker = new google.maps.Marker({
