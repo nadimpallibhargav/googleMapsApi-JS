@@ -11,7 +11,7 @@ function initMap() {
     // map
     let mainMap = new google.maps.Map(mapFrame, options);
 
-
+    // function for adding markers
     function addMarker(mapProperties) {     
         let marker = new google.maps.Marker({
             position: mapProperties.cordinates,
@@ -30,10 +30,27 @@ function initMap() {
         }
     }
 
+    // array of markers
+    let mapMarkers = [
+        {
+            cordinates: {
+                lat:13.0332221,
+                lng:77.6299528
+            }, 
+            content: '<h3>First place to visit</h3>'
+        },
+        {
+            cordinates: {
+                lat:13.0332221,
+                lng:77.6299800
+            }, 
+            content: '<h3>Second place to visit</h3>'
+        }
+    ];
 
-    addMarker({cordinates: {lat:13.0332221,lng:77.6299528}, content: '<h3>First place to visit</h3>'});
-    addMarker({cordinates: {lat:13.0332221,lng:77.6299800}, content: '<h3>Second place to visit</h3>'});
-
-
+    // looping array of markers
+    mapMarkers.forEach((mapmarks) => {
+        addMarker(mapmarks);
+    })
 
 }
