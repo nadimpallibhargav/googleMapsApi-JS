@@ -14,7 +14,8 @@ function initMap() {
     // marker on map
     let marker = new google.maps.Marker({
         position: {lat:13.0332221,lng:77.6299528},
-        map: mainMap
+        map: mainMap,
+        icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
     });
 
 }
