@@ -4,7 +4,7 @@ function initMap() {
 
     // map options
     let options = {
-        zoom:20,
+        zoom:15,
         center:{lat:13.0332221,lng:77.6299528}
     }
 
@@ -40,8 +40,8 @@ function initMap() {
     let mapMarkers = [
         {
             cordinates: {
-                lat:13.0332221,
-                lng:77.6299528
+                lat:13.040282222980863,
+                lng:77.62623432865999
             }, 
             content: '<h3>First place to visit</h3>'
         },
