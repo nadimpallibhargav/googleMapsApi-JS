@@ -11,15 +11,15 @@ function initMap() {
     // map
     let mainMap = new google.maps.Map(mapFrame, options);
 
-    function addMarker(cordinates) {        
+    function addMarker(mapProperties) {        
         let marker = new google.maps.Marker({
-            position: cordinates,
+            position: mapProperties.cordinates,
             map: mainMap,
             icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
         });
     }
 
-    addMarker({lat:13.0332221,lng:77.6299528});
-    addMarker({lat:13.0332221,lng:77.6299800});
+    addMarker({cordinates: {lat:13.0332221,lng:77.6299528}});
+    addMarker({cordinates: {lat:13.0332221,lng:77.6299800}});
 
 }
